@@ -1,0 +1,8 @@
+extractDomain
+extractDomain is gouv-url.com
+
+ Currenlty search for a gouv-url.com
+
+ Currenlty ssanitizedUrl earch for a gouv-url.com
+go to url
+Le score de la page est de -4

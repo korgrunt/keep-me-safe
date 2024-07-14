@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', async function() {
   
     // Envoyer l'URL à l'API
     try {
-      const response = await fetch('http://localhost:3000/api/check', {
+      const response = await fetch('https://hash24security.com/v1/check', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ host: url })
+        body: JSON.stringify({ host: url }),
+        timeout: 30000
       });
       const data = await response.json();
   

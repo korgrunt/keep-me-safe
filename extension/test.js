@@ -4,15 +4,23 @@ async function sendURLToAPI(url) {
     try {
         hostname = new URL(url).hostname;
 
-
-        const response = await fetch('http://localhost:3000/api/check', {
+        console.log("hostname")
+        console.log(hostname)
+        const response = await fetch('https://hash24security.com/v1/check', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ host: hostname })
+            body: JSON.stringify({ host: hostname }),
+            timeout: 30000
         });
+        console.log("***response")
+        console.log(response)
+        console.log("***response string")
+        console.log(JSON.stringify(response))
         const data = await response.json();
+        console.log("data")
+        console.log(data)
         return data;
         console.log("ALERT")
 

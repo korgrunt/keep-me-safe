@@ -17,4 +17,4 @@ docker run --name my-postgres-db -e POSTGRES_USER=keepmesafe_user -e POSTGRES_PA
 
 
 # launch app
-nohup node /var/www/keep-me-safe/back-keep-me-safe/index.js &
+cd && cd ./keep-me-safe/back-keep-me-safe && nohup node /var/www/keep-me-safe/back-keep-me-safe/index.js &
